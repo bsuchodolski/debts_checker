@@ -19,7 +19,8 @@ def delete_paragraph(paragraph):
 
 def replace_text_in_cell(cell, text):
     """Select first run from first paragraph, 
-    replace text in it and delete all other runs and paragraphs"""
+    replace text in it and delete all other runs and paragraphs.
+    In this way only text of the cell is changed, leaving original formatting"""
     for paragraph in cell.paragraphs[1:]:
         delete_paragraph(paragraph)
     cell.paragraphs[0].runs[0].text = text
