@@ -63,11 +63,11 @@ def colour_range_cells(ws, start, end, color):
 
 
 # Open word document and extract tables
-document = Document('documents/word.docx')
+document = Document('word.docx')
 tables = document.tables
 
 # Open spreadsheet document and extract actual rows(as cells are differently merged)
-workbook = load_workbook('documents/excel.xlsx', data_only=True)
+workbook = load_workbook('excel.xlsx', data_only=True)
 spreadsheet = workbook.active
 merged_rows = [(y[0][1:], y[1][1:]) for y in
                [x.split(":") for x in spreadsheet.merged_cell_ranges if 'A' in x]]
@@ -138,5 +138,5 @@ for index, table in enumerate(tables):
             print(str(index + 1), "Group I set.\n")
         colour_range_cells(spreadsheet, ('A' + merged_rows[index][0]), ('R' + merged_rows[index][1]), COLOR_ORANGE)
 
-document.save('documents/new.docx')
-workbook.save('documents/new.xlsx')
+document.save('new.docx')
+workbook.save('new.xlsx')
