@@ -10,4 +10,6 @@ Thing to do/check:
 - check credit value and compare it with xlsx spreadsheet,
 - check if correct creditor group is filled in.
 
+![alt text](https://raw.githubusercontent.com/bsuchodolski/debts_checker/master/document.png)
+
 All data - names of companies, invoice numbers, dates and values - in example docx and xlsx submitted here were anonymized.
